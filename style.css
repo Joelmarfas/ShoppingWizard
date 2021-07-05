@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  box-sizing: 960px;
+}
+
+.topnav {
+  float: left;
+  color: #ffffff;
+  padding: 1rem 4rem 2rem 0rem;
+  height: 70px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstcontainer div {
+  order: 1;
+}
+
+.first-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+}
+
+.small-images {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
