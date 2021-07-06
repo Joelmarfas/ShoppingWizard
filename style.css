@@ -139,6 +139,9 @@ footer {
   text-align: center;
 }
 
+#shipping-container {
+}
+
 #shipping {
   display: flex;
   flex-direction: column;
