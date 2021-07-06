@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  box-sizing: 960px;
+}
+
+.topnav {
+  float: left;
+  color: #ffffff;
+  padding-bottom: 2rem;
+  size: 30p auto;
+}
+
+.body {
+  font-family: "Playfair Display", serif;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
