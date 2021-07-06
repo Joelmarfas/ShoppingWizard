@@ -99,7 +99,7 @@ body {
 
 .color-container img:hover {
   cursor: pointer;
-  border: 3px solid black;
+  border: 1px solid black;
 }
 
 .color-container img:focus {
