@@ -282,3 +282,22 @@ label {
   left: -35px;
   content: "✖";
 }
+#shipping {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 1rem;
+}
+
+.flex-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-form label {
+  padding-bottom: 0.5rem;
+}
+
+input {
+  margin: 0;
+}

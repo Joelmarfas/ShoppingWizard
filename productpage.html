@@ -330,4 +330,58 @@
 </div>
 </body>
 
+
+    <div class="shipping-container">
+      <h2>Shipping</h2>
+      <h4>Shipping type</h4>
+      <form id="shipping" action="shipping">
+        <div>
+          <input
+            type="radio"
+            name="shipping-time"
+            id="shipment-72h"
+            value="72h"
+          />
+          <label for="shipment-72h">Free shipment (72h)</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="shipping-time"
+            id="shipment-48h"
+            value="48h"
+          />
+          <label for="shipment-48h"
+            >Extra shipping (48h) <span>4,99€</span></label
+          >
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="shipping-time"
+            id="shipment-24h"
+            value="48h"
+          />
+          <label for="shipment-24h">Premium (24h) <span>9,99€</span></label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="gift" id="gift" />
+          <label for="gift">Is it a gift?</label>
+        </div>
+
+        <div class="flex-form">
+          <label for="message">Gift message</label>
+          <textarea name="message" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="flex-form">
+          <label for="file">Gift wrapper image</label>
+          <input type="file" id="file" name="file" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
