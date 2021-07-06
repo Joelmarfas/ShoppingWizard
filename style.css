@@ -1,7 +1,7 @@
 *,
 *::after,
 *::before {
-  box-sizing: 960px;
+  box-sizing: border-box;
 }
 
 body {
@@ -40,10 +40,14 @@ body {
 }
 
 .small-images {
-  display: flex;
   flex-direction: column;
   width: 35%;
-  justify-content: space-around;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.small-images img {
+  max-width: 10rem;
 }
 
 .main-container img {
@@ -53,7 +57,7 @@ body {
 .second-container {
   display: flex;
   flex-direction: column;
-  row-gap: 1.75rem;
+  width: 50%;
 }
 
 .brand-info {
@@ -74,4 +78,53 @@ body {
 
 .discount-code {
   font-size: 1rem;
+}
+
+.color-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  max-width: 60%;
+  gap: 3%;
+  padding: 0;
+}
+
+.color-container img {
+  width: 100%;
+}
+
+.color-container img:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.color-container img:focus {
+  border: 1px solid red;
+}
+
+.size-container {
+  width: 100%;
+}
+
+#size {
+  width: 60%;
+  cursor: pointer;
+  color: #757575;
+  background-color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+select {
+  text-align-last: center;
+}
+
+.add-to-cart {
+  width: 60%;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
