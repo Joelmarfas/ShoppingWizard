@@ -282,6 +282,9 @@ label {
   left: -35px;
   content: "✖";
 }
+#shipping-container {
+}
+
 #shipping {
   display: flex;
   flex-direction: column;
