@@ -25,7 +25,10 @@ body {
 .main-container {
   display: flex;
   flex-direction: row;
-  column-gap: 1rem;
+  column-gap: 3rem;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .product-info div {
@@ -96,7 +99,7 @@ body {
 
 .color-container img:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .color-container img:focus {
@@ -108,7 +111,7 @@ body {
 }
 
 #size {
-  width: 60%;
+  width: 100%;
   cursor: pointer;
   color: #757575;
   background-color: #ffffff;
@@ -121,10 +124,17 @@ select {
 }
 
 .add-to-cart {
-  width: 60%;
+  margin-top: 1rem;
+  width: 100%;
   cursor: pointer;
   color: #ffffff;
   background-color: #000000;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: bold;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
 }
