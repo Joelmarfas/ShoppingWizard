@@ -51,6 +51,14 @@ body {
 
 .small-images img {
   max-width: 10rem;
+  border: 1px solid white;
+}
+
+.small-images img:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+.small-images img::after {
 }
 
 .main-container img {
@@ -95,14 +103,15 @@ body {
 
 .color-container img {
   width: 100%;
+  border: 1px solid white;
 }
 
 .color-container img:hover {
   cursor: pointer;
   border: 3px solid black;
 }
-
 .color-container img:focus {
+  cursor: pointer;
   border: 1px solid red;
 }
 
@@ -291,6 +300,9 @@ label {
   flex-direction: column;
   width: 65%;
   gap: 1rem;
+}
+#shipping span {
+  font-weight: bold;
 }
 #textarea {
   width: 25%;
