@@ -53,7 +53,7 @@
             <option value="LXL">L/XL</option>
           </select>
         </div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart" id="cart">Add to cart</button>
 
         <div class="sizes-guide">Guía de tallas</div>
 
@@ -87,7 +87,8 @@
             type="radio"
             name="shipping-time"
             id="shipment-72h"
-            value="72h"
+            value="3"
+            required
           />
           <label for="shipment-72h">Free shipment (72h)</label>
         </div>
@@ -97,7 +98,7 @@
             type="radio"
             name="shipping-time"
             id="shipment-48h"
-            value="48h"
+            value="2"
           />
           <label for="shipment-48h"
             >Extra shipping (48h) <span>4,99€</span></label
@@ -109,7 +110,7 @@
             type="radio"
             name="shipping-time"
             id="shipment-24h"
-            value="48h"
+            value="1"
           />
           <label for="shipment-24h">Premium (24h) <span>9,99€</span></label>
         </div>
@@ -119,14 +120,25 @@
           <label for="gift">Is it a gift?</label>
         </div>
 
-        <div class="flex-form">
+        <div class="flex-form hidden">
           <label for="message">Gift message</label>
-          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <textarea
+            name="message"
+            id="textarea"
+            cols="30"
+            rows="10"
+            maxlength="200"
+          ></textarea>
         </div>
 
-        <div class="flex-form">
+        <div class="flex-form hidden">
           <label for="file">Gift wrapper image</label>
-          <input type="file" id="file" name="file" />
+          <input
+            type="file"
+            id="file"
+            name="file"
+            accept="image/png, image/jpeg"
+          />
         </div>
       </form>
     </div>

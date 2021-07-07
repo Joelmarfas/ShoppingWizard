@@ -161,3 +161,7 @@ footer {
 input {
   margin: 0;
 }
+
+.hidden {
+  visibility: hidden;
+}
