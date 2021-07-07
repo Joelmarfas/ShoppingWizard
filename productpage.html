@@ -367,13 +367,13 @@
           />
           <label for="shipment-24h">Premium (24h) <span>9,99€</span></label>
         </div>
-
-        <div>
+        <div id="estimated-time"></div>
+        <div id="checkbox-div">
           <input type="checkbox" name="gift" id="gift" />
           <label for="gift">Is it a gift?</label>
         </div>
 
-        <div class="flex-form hidden">
+        <div class="flex-form invisible">
           <label for="message">Gift message</label>
           <textarea
             name="message"
@@ -384,7 +384,7 @@
           ></textarea>
         </div>
 
-        <div class="flex-form hidden">
+        <div class="flex-form invisible">
           <label for="file">Gift wrapper image</label>
           <input
             type="file"
