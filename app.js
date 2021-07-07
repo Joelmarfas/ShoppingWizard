@@ -19,9 +19,6 @@ for (zoomImage of zoomImages) {
   zoomImage.addEventListener("click", zoomIn);
 }
 
-for (smallImage of smallImages) {
-  smallImage.addEventListener("click", selectImages);
-}
 giftCheckbox.addEventListener("click", giftArea);
 for (radioButton of radioButtons) {
   radioButton.addEventListener("click", shipmentDate);
@@ -29,10 +26,22 @@ for (radioButton of radioButtons) {
 
 function zoomIn(e) {
   bigImage.src = e.target.src;
+  for (zoomImage of zoomImages) {
+    zoomImage.style.borderColor = "transparent";
+  }
+
+  e.target.style.borderColor = "black";
 }
 
 function changeColor(e) {
-  console.log(e.target.src);
+  for (colorImage of colorImages) {
+    colorImage.style.borderColor = "transparent";
+  }
+  for (zoomImage of zoomImages) {
+    zoomImage.style.borderColor = "transparent";
+  }
+  zoomImages[0].style.borderColor = "black";
+  e.target.style.borderColor = "black";
 
   switch (e.target.id) {
     case "black":
@@ -69,14 +78,6 @@ function changeColor(e) {
     default:
       console.log("ERROR");
   }
-}
-
-function selectImages(e) {
-  for (smallImage of smallImages) {
-    smallImage.style.borderColor = "transparent";
-  }
-
-  e.target.style.borderColor = "black";
 }
 
 function giftArea() {
