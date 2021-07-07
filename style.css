@@ -51,12 +51,12 @@ body {
 
 .small-images img {
   max-width: 10rem;
-  border: 1px solid white;
+  border: 2px solid transparent;
 }
 
 .small-images img:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 .small-images img::after {
 }
@@ -103,16 +103,16 @@ body {
 
 .color-container img {
   width: 100%;
-  border: 1px solid white;
+  border: 2px solid transparent;
 }
 
 .color-container img:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 .color-container img:focus {
   cursor: pointer;
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .size-container {
