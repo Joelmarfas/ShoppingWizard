@@ -299,7 +299,7 @@ label {
   width: 65%;
   gap: 1rem;
 }
-#shipping > div {
+.shipping-div {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;

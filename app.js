@@ -165,11 +165,18 @@ function addToCart() {
   let headstep1 = document.querySelector(".steps");
   let step1 = document.getElementById("step1");
   let footstep1 = document.querySelector(".buttonfield");
-  //var shipping = document.getElementById("shipping-container");
-  //mainContainer.appendChild(shipping);
+
   mainContainer.appendChild(step1);
   document.querySelector(".topnav").classList.add("hidden");
   document.querySelector("header").appendChild(headstep1);
   document.querySelector("footer > p").classList.add("hidden");
   document.querySelector("footer").appendChild(footstep1);
+}
+
+var form = document.getElementById("profile-form");
+form.addEventListener("submit", step1to2);
+
+function step1to2(event) {
+  console.log("HOLA");
+  event.preventDefault();
 }

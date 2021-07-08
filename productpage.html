@@ -330,7 +330,7 @@
   </div>
   <div id="step1">
     <h3>Profile</h3>
-    <form>
+    <form id="profile-form">
       <label for="uname">Username:</label><br />
       <input
         type="text"
@@ -355,7 +355,7 @@
         name="psw"
         maxlength="20"
         minlength="8"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])"
+        pattern="[A-Za-z0-9-/_-*+]"
         required
       /><br />
       <label for="cpassword">Confirm Password:</label><br />
@@ -389,7 +389,7 @@
       <h2>Shipping</h2>
       <h4>Shipping type</h4>
       <form id="shipping" action="shipping">
-        <div>
+        <div class="shipping-div">
           <input
             type="radio"
             name="shipping-time"
@@ -400,7 +400,7 @@
           <label for="shipment-72h">Free shipment (72h)</label>
         </div>
 
-        <div>
+        <div class="shipping-div">
           <input
             type="radio"
             name="shipping-time"
@@ -412,7 +412,7 @@
           >
         </div>
 
-        <div>
+        <div class="shipping-div">
           <input
             type="radio"
             name="shipping-time"
@@ -422,7 +422,7 @@
           <label for="shipment-24h">Premium (24h) <span>9,99€</span></label>
         </div>
         <div id="estimated-time"></div>
-        <div id="checkbox-div">
+        <div class="shipping-div" id="checkbox-div">
           <input type="checkbox" name="gift" id="gift" />
           <label for="gift">Is it a gift?</label>
         </div>
