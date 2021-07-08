@@ -167,10 +167,14 @@ function addToCart() {
   let step1 = document.getElementById("step1");
   //let footstep1 = document.querySelector(".buttonfield");
 
-  mainContainer.appendChild(step1);
   document.querySelector(".topnav").classList.add("hidden");
-  document.querySelector("header").appendChild(headstep1);
   document.querySelector("footer > p").classList.add("hidden");
+
+  mainContainer.appendChild(step1);
+  step1.classList.remove("hidden");
+
+  document.querySelector("header").appendChild(headstep1);
+  headstep1.classList.remove("hidden");
   //document.querySelector("footer").appendChild(footstep1);
   step = 1;
 }
@@ -183,10 +187,19 @@ function nextStep(event) {
 
   if (step == 1) {
     step = 2;
-    console.log("HOLA");
 
     step1.classList.add("hidden");
-    let step2 = document.querySelector(".container");
+
+    var step2 = document.querySelector(".container");
+    step2.classList.remove("hidden");
+
     mainContainer.appendChild(step2);
   }
+
+  if (step == 2) {
+    console.log("PASAR A STEP3");
+  }
 }
+
+//var form2 = document.getElementById("form-adress");
+//form2.addEventListener("submit", nextStep);

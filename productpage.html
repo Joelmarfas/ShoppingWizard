@@ -127,9 +127,9 @@
     <p id="secs"></p>
     <h2 id="end"></h2>
 
-    <article class="container">
+    <article class="container hidden">
         <div class="row">
-            <form>
+            <form id="form-adress">
                 <h3>Order details</h3>
                 <p onclick="ShowAndHideDiv('divId', 'show')">Timer</p>
                 <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
@@ -322,13 +322,13 @@
 
 
 <div>
-  <div class="steps">
+  <div class="steps hidden">
     <p>Profile</p>
     <p>Adress</p>
     <p>Shipping</p>
     <p>Finish</p>
   </div>
-  <div id="step1">
+  <div class="hidden" id="step1">
     <h3>Profile</h3>
     <form id="profile-form">
       <label for="uname">Username:</label><br />
@@ -389,7 +389,7 @@
     <div id="shipping-container">
       <h2>Shipping</h2>
       <h4>Shipping type</h4>
-      <form id="shipping" action="shipping">
+      <form id="shipping">
         <div class="shipping-div">
           <input
             type="radio"
