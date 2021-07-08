@@ -106,15 +106,7 @@ body {
 
 .color-container img:hover {
   cursor: pointer;
-<<<<<<< HEAD
   border: 2px solid black;
-=======
-<<<<<<< HEAD
-  border: 3px solid black;
-=======
-  border: 2px solid black;
->>>>>>> 490bfa9 (colorchange)
->>>>>>> main
 }
 .color-container img:focus {
   cursor: pointer;
@@ -154,8 +146,6 @@ footer {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 /* This is my code */
 
 .hide {
@@ -299,7 +289,6 @@ label {
   left: -35px;
   content: "✖";
 }
->>>>>>> main
 #shipping-container {
   width: 100%;
 }
