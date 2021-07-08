@@ -154,21 +154,10 @@ footer {
     display: none;
 }
 
-.container {
-    background-color: #f2f2f2;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-}
-
 .row {
     display: -ms-flexbox;
-    /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap;
-    /* IE10 */
-    flex-wrap: wrap;
-    margin: 10px;
-    justify-content: center;
+    max-width: 75%;
+    align-self: center;
 }
 
 input[type="text"] {
@@ -180,13 +169,32 @@ input[type="text"] {
     font-size: 16px;
 }
 
+input[type="email"] {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 16px;
+}
+
 .box select {
     background-color: #000000;
     color: rgb(250, 250, 250);
-    padding: 0.5rem;
-    width: 32.2%;
+    justify-content: space-between;
+    width: 32.9%;
     font-size: 20px;
     outline: none;
+    padding: 0.7rem;
 }
 
 .box select option {
@@ -228,12 +236,35 @@ label {
 }
 
 #phoneNumber {
-    width: 73%;
+    width: 74%;
     margin-bottom: 1.25rem;
-    padding: 0.75rem;
+    margin-left: 7px;
     border: 0.75px solid #ccc;
     font-family: serif;
     font-size: 15px;
+}
+
+.alignRight {
+    margin-left: 2rem;
+}
+
+.buttonStyleBlack {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    font-size: large;
+    font-weight: bold;
+    margin: 0.5rem;
+    border-color: none;
+}
+
+.buttonStyleWhite {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0.5rem;
+    font-size: large;
+    font-weight: bold;
+    margin: 0.5rem;
+    border-color: none;
 }
 
 
@@ -241,19 +272,23 @@ label {
 
 .steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
-    background-color: #757575;
     padding-top: 15px;
     padding-bottom: 15px;
+    width: 100%;
 }
 
 .buttonfield {
     text-align: right;
-    background-color: #757575;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 20px;
+    background-color: #bc222b;
+    padding: 1rem;
+}
+
+.line {
+    line-height: 3px;
+    color: #bc222b;
 }
 
 
@@ -264,16 +299,14 @@ label {
 
 #message {
     display: none;
-    background: #f1f1f1;
-    color: #000;
+    color: #bc222b;
+    background-color: #fcfcfc;
     position: relative;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 1rem;
     font-family: serif;
 }
 
 #message p {
-    padding: 10px 35px;
     font-size: 18px;
 }
 
@@ -294,7 +327,8 @@ label {
 /* Add a red text color and an "x" when the requirements are wrong */
 
 .invalid {
-    color: red;
+    color: #bc222b;
+    padding-left: 3rem;
 }
 
 .invalid:before {
@@ -341,4 +375,9 @@ input {
 
 .invisible {
     visibility: hidden;
+}
+
+.transitionElements {
+    width: 50%;
+    align-self: center;
 }
