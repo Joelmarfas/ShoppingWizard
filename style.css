@@ -1,140 +1,229 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: serif;
-  font-size: 12px;
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 20px;
+    font-family: serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
 }
 
 .topnav {
-  float: left;
-  color: #ffffff;
-  padding: 1rem 4rem 2rem 1rem;
-  height: 70px;
+    float: left;
+    color: #ffffff;
+    padding: 1rem 4rem 2rem 1rem;
+    height: 70px;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row;
-  column-gap: 3rem;
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 .product-info div {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 .first-container {
-  display: flex;
-  width: 50%;
-  flex-direction: row;
-  column-gap: 0.5rem;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    column-gap: 0.5rem;
 }
 
 .small-images {
-  flex-direction: column;
-  width: 35%;
-  justify-content: center;
-  row-gap: 1rem;
+    flex-direction: column;
+    width: 35%;
+    justify-content: center;
+    row-gap: 1rem;
 }
 
 .small-images img {
-  max-width: 10rem;
+    max-width: 10rem;
 }
 
 .main-container img {
-  width: 100%;
+    width: 100%;
 }
 
 .second-container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .brand-info {
-  font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 
 .model-info {
-  font-size: 1.5rem;
-  font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .price-info {
-  color: #bc222b;
-  font-family: Georgia;
-  font-size: 1.5rem;
-  font-weight: bold;
+    color: #bc222b;
+    font-family: Georgia;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .discount-code {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .color-container {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-  max-width: 60%;
-  gap: 3%;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    max-width: 60%;
+    gap: 3%;
+    padding: 0;
 }
 
 .color-container img {
-  width: 100%;
+    width: 100%;
 }
 
 .color-container img:hover {
-  cursor: pointer;
-  border: 3px solid black;
+    cursor: pointer;
+    border: 3px solid black;
 }
 
 .color-container img:focus {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 .size-container {
-  width: 100%;
+    width: 100%;
 }
 
 #size {
-  width: 100%;
-  cursor: pointer;
-  color: #757575;
-  background-color: #ffffff;
-  padding-top: 15px;
-  padding-bottom: 15px;
+    width: 100%;
+    cursor: pointer;
+    color: #757575;
+    background-color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 select {
-  text-align-last: center;
+    text-align-last: center;
 }
 
 .add-to-cart {
-  margin-top: 1rem;
-  width: 100%;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: #000000;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: bold;
-  font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: bold;
+    font-size: 1rem;
 }
 
 footer {
-  text-align: center;
+    text-align: center;
+}
+
+
+/* This is my code */
+
+.hide {
+    display: none;
+}
+
+.container {
+    background-color: #f2f2f2;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 16px;
+}
+
+.box select {
+    background-color: #000000;
+    color: rgb(250, 250, 250);
+    padding: 0.5rem;
+    width: 32.2%;
+    font-size: 20px;
+    outline: none;
+}
+
+.box select option {
+    padding: 1rem;
+}
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#input {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 20px;
+}
+
+#output {
+    width: 25%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 15px;
+}
+
+#phoneNumber {
+    width: 73%;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    border: 0.75px solid #ccc;
+    font-family: serif;
+    font-size: 15px;
 }
