@@ -124,8 +124,6 @@ function shipmentDate(e) {
     "December",
   ];
 
-  //"<p> Between <b>" + date.getDate()
-  // `<p> Between <b> ${date.getDate()}`
   var estimatedTime = `<h3 class="">Your order will arrive:</h3>
   <p> ESTIMATED DELIVERY DATE: </p>
   <p> Between <b> ${date.getDate()} ${
