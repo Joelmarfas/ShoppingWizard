@@ -106,11 +106,7 @@ body {
 
 .color-container img:hover {
   cursor: pointer;
-<<<<<<< HEAD
-  border: 3px solid black;
-=======
   border: 2px solid black;
->>>>>>> 490bfa9 (colorchange)
 }
 .color-container img:focus {
   cursor: pointer;
