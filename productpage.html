@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
+    <script src="./joel.js" defer></script>
+  </head>
 
 <body>
     <header>
@@ -263,6 +265,69 @@
         </p>
     </footer>
     <script type="text/javascript " src="script.js "></script>
+
+<p></p>
+<p></p>
+<div>
+  <div class="steps">
+    <p>Profile</p>
+    <p>Adress</p>
+    <p>Shipping</p>
+    <p>Finish</p>
+  </div>
+  <div>
+    <h3>Profile</h3>
+    <form>
+      <label for="uname">Username:</label><br />
+      <input
+        type="text"
+        id="uname"
+        name="uname"
+        maxlength="20"
+        minlength="5"
+        required
+      /><br />
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        maxlength="50"
+      /><br />
+      <label for="psw">Password:</label><br />
+      <input
+        type="password"
+        id="psw"
+        name="psw"
+        maxlength="20"
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])"
+        required
+      /><br />
+      <label for="cpassword">Confirm Password:</label><br />
+      <input
+        type="password"
+        id="cpassword"
+        name="cpassword"
+        maxlength="20"
+        minlength="8"
+        required
+      /><br />
+      <div class="buttonfield">
+        <button type="reset" value="Clear form">Clear form</button>
+        <input id="submit" type="submit" value="Next" /><br />
+      </div>
+    </form>
+  </div>
+  <div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>5 characters</b></p>
+  </div>
+</div>
 </body>
 
 </html>
