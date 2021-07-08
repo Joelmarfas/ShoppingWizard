@@ -1,3 +1,4 @@
+/* SELECTORS */
 var giftCheckbox = document.getElementById("gift");
 var giftTextArea = document.getElementById("textarea");
 
@@ -11,6 +12,8 @@ var smallImages = document.getElementsByClassName("img-select");
 var zoomImages = document.querySelectorAll(".small-images > img");
 var colorImages = document.querySelectorAll(".color-container img");
 var bigImage = document.querySelector(".big-images > img");
+
+/* EVENTS */
 for (colorImage of colorImages) {
   colorImage.addEventListener("click", changeColor);
 }
@@ -23,6 +26,9 @@ giftCheckbox.addEventListener("click", giftArea);
 for (radioButton of radioButtons) {
   radioButton.addEventListener("click", shipmentDate);
 }
+carButton.addEventListener("click", addToCart);
+
+/* EVENT FUNCTIONS */
 
 function zoomIn(e) {
   bigImage.src = e.target.src;
@@ -134,8 +140,6 @@ function shipmentDate(e) {
 
   estimated.innerHTML = estimatedTime;
 }
-
-carButton.addEventListener("click", addToCart);
 
 function addToCart() {
   for (mainContainerElement of mainContainerElements) {
