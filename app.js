@@ -1,5 +1,6 @@
 var storeColor = "black";
 var storeSize = "";
+var step = 0;
 
 /* SELECTORS */
 var giftCheckbox = document.getElementById("gift");
@@ -164,19 +165,28 @@ function addToCart() {
 
   let headstep1 = document.querySelector(".steps");
   let step1 = document.getElementById("step1");
-  let footstep1 = document.querySelector(".buttonfield");
+  //let footstep1 = document.querySelector(".buttonfield");
 
   mainContainer.appendChild(step1);
   document.querySelector(".topnav").classList.add("hidden");
   document.querySelector("header").appendChild(headstep1);
   document.querySelector("footer > p").classList.add("hidden");
-  document.querySelector("footer").appendChild(footstep1);
+  //document.querySelector("footer").appendChild(footstep1);
+  step = 1;
 }
 
 var form = document.getElementById("profile-form");
-form.addEventListener("submit", step1to2);
+form.addEventListener("submit", nextStep);
 
-function step1to2(event) {
-  console.log("HOLA");
+function nextStep(event) {
   event.preventDefault();
+
+  if (step == 1) {
+    step = 2;
+    console.log("HOLA");
+
+    step1.classList.add("hidden");
+    let step2 = document.querySelector(".container");
+    mainContainer.appendChild(step2);
+  }
 }
