@@ -299,6 +299,16 @@ label {
   width: 65%;
   gap: 1rem;
 }
+#shipping > div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+label {
+  margin: 0;
+}
+
 #shipping span {
   font-weight: bold;
 }
@@ -325,4 +335,13 @@ input {
 
 .invisible {
   visibility: hidden;
+}
+
+#step1 {
+  width: 100%;
+}
+
+#small1,
+#black {
+  border-color: black;
 }

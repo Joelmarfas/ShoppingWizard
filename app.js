@@ -1,3 +1,6 @@
+var storeColor = "black";
+var storeSize = "";
+
 /* SELECTORS */
 var giftCheckbox = document.getElementById("gift");
 var giftTextArea = document.getElementById("textarea");
@@ -13,7 +16,11 @@ var zoomImages = document.querySelectorAll(".small-images > img");
 var colorImages = document.querySelectorAll(".color-container img");
 var bigImage = document.querySelector(".big-images > img");
 
+var sizeOptions = document.getElementById("size");
+
 /* EVENTS */
+sizeOptions.addEventListener("change", getSize);
+
 for (colorImage of colorImages) {
   colorImage.addEventListener("click", changeColor);
 }
@@ -29,6 +36,10 @@ for (radioButton of radioButtons) {
 carButton.addEventListener("click", addToCart);
 
 /* EVENT FUNCTIONS */
+
+function getSize(e) {
+  storeSize = e.target.value;
+}
 
 // Turn small mic in BIG PIC
 function zoomIn(e) {
@@ -49,6 +60,8 @@ function changeColor(e) {
   }
   zoomImages[0].style.borderColor = "black";
   e.target.style.borderColor = "black";
+
+  storeColor = e.target.id;
 
   switch (e.target.id) {
     case "black":
@@ -147,7 +160,16 @@ function addToCart() {
     mainContainerElement.classList.add("hidden");
   }
 
-  //var mainContainer = document.querySelector(".main-container");
+  var mainContainer = document.querySelector(".main-container");
+
+  let headstep1 = document.querySelector(".steps");
+  let step1 = document.getElementById("step1");
+  let footstep1 = document.querySelector(".buttonfield");
   //var shipping = document.getElementById("shipping-container");
   //mainContainer.appendChild(shipping);
+  mainContainer.appendChild(step1);
+  document.querySelector(".topnav").classList.add("hidden");
+  document.querySelector("header").appendChild(headstep1);
+  document.querySelector("footer > p").classList.add("hidden");
+  document.querySelector("footer").appendChild(footstep1);
 }

@@ -13,8 +13,10 @@
 </head>
 
 <body>
+  
     <header>
-        <img class="topnav" src="https://i.postimg.cc/XY5VxfdQ/Assembler-School-of-Software-Engineering-logo.jpg" alt="Assembler School" />
+      
+        <img class="topnav " src="https://i.postimg.cc/XY5VxfdQ/Assembler-School-of-Software-Engineering-logo.jpg" alt="Assembler School" />
     </header>
     <div class="main-container">
         <div class="first-container">
@@ -93,7 +95,7 @@
           </ul>
           <div class="size-container">
             <select name="size-selector" id="size">
-              <option value="tallas" selected disabled>Elija una talla</option>
+              <option value="sizes" selected disabled>Elija una talla</option>
               <option value="XSS">XS/S</option>
               <option value="SM">S/M</option>
               <option value="ML">M/L</option>
@@ -112,6 +114,11 @@
           <img src="" alt="" />
         </div>
       </div>
+      <footer>
+        <p>
+            Todos los derechos Reservados: Antonio Copete, José Valenzuela y Joel Martínez
+        </p>
+    </footer>
 
     </div>
 
@@ -270,8 +277,8 @@
                 <label for="postalCode">  Postal Code</label>
                 <input type="text" id="postalCode" pattern="[0-9]{4,6}" name="zip" placeholder="15001">
                 <h3>Is your billing address different?</h3>
-                <input type="radio" name="radioShow" value="Yes, it is" onclick="ShowAndHideDiv( 'divId', 'show')">Yes, it is.</input>
-                <input type="radio" name="radioShow" value="Hide div" onclick="ShowAndHideDiv( 'divId', 'hide')">No, it is the same as above.</input>
+                <input type="radio" name="radioShow" value="Yes, it is" onclick="ShowAndHideDiv('divId', 'show')">Yes, it is.</input>
+                <input type="radio" name="radioShow" value="Hide div" onclick="ShowAndHideDiv('divId', 'hide')">No, it is the same as above.</input>
                 </br>
                 </br>
                 <div id="divId" class="hide">
@@ -310,15 +317,10 @@
         </form>
         </div>
     </article>
-    <footer>
-        <p>
-            Todos los derechos Reservados: Antonio Copete, José Valenzuela y Joel Martínez
-        </p>
-    </footer>
+    
     <script type="text/javascript " src="script.js "></script>
 
-<p></p>
-<p></p>
+
 <div>
   <div class="steps">
     <p>Profile</p>
@@ -326,7 +328,7 @@
     <p>Shipping</p>
     <p>Finish</p>
   </div>
-  <div>
+  <div id="step1">
     <h3>Profile</h3>
     <form>
       <label for="uname">Username:</label><br />
@@ -365,21 +367,22 @@
         minlength="8"
         required
       /><br />
+      <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>5 characters</b></p>
+      </div>
+    </div>
+
       <div class="buttonfield">
         <button type="reset" value="Clear form">Clear form</button>
         <input id="submit" type="submit" value="Next" /><br />
       </div>
     </form>
-  </div>
-  <div id="message">
-    <h3>Password must contain the following:</h3>
-    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-    <p id="number" class="invalid">A <b>number</b></p>
-    <p id="length" class="invalid">Minimum <b>5 characters</b></p>
-  </div>
+  
 </div>
-</body>
 
 
     <div id="shipping-container">
