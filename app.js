@@ -30,13 +30,14 @@ carButton.addEventListener("click", addToCart);
 
 /* EVENT FUNCTIONS */
 
+// Turn small mic in BIG PIC
 function zoomIn(e) {
   bigImage.src = e.target.src;
   for (zoomImage of zoomImages) {
-    zoomImage.style.borderColor = "transparent";
+    zoomImage.style.borderColor = "transparent"; // Reset rest of borders
   }
 
-  e.target.style.borderColor = "black";
+  e.target.style.borderColor = "black"; // Put black border to the selected element after reset the rest
 }
 
 function changeColor(e) {
@@ -146,7 +147,7 @@ function addToCart() {
     mainContainerElement.classList.add("hidden");
   }
 
-  var mainContainer = document.querySelector(".main-container");
-  var shipping = document.getElementById("shipping-container");
-  mainContainer.appendChild(shipping);
+  //var mainContainer = document.querySelector(".main-container");
+  //var shipping = document.getElementById("shipping-container");
+  //mainContainer.appendChild(shipping);
 }
