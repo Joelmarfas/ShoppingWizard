@@ -22,3 +22,11 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+/* 1 Step Joel */
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
