@@ -1,22 +1,22 @@
 // Jose code starts here
-/*
+
 function ShowAndHideDiv(form, classElement) {
-    var element = document.getElementById(form);
-    if (element.className == "display") {
-        if (classElement == "hide") {
-            element.className = "hide";
-        } else {
-            element.className = "display";
-        }
+  var element = document.getElementById(form);
+  if (element.className == "display") {
+    if (classElement == "hide") {
+      element.className = "hide";
     } else {
-        if (classElement == "show") {
-            element.className = "display";
-        } else {
-            element.className = "hide";
-        }
+      element.className = "display";
     }
+  } else {
+    if (classElement == "show") {
+      element.className = "display";
+    } else {
+      element.className = "hide";
+    }
+  }
 }
-*/
+
 var startingMinutes = 9;
 var time = startingMinutes * 60;
 

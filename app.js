@@ -142,6 +142,9 @@ function shipmentDate(e) {
   estimated.innerHTML = estimatedTime;
 }
 
+var step1 = document.getElementById("step1");
+var profileStep = document.getElementById("profile-step");
+
 function addToCart() {
   for (mainContainerElement of mainContainerElements) {
     mainContainerElement.classList.add("hidden");
@@ -149,8 +152,7 @@ function addToCart() {
 
   var mainContainer = document.querySelector(".main-container");
 
-  let headstep1 = document.querySelector(".steps");
-  let step1 = document.getElementById("step1");
+  var headstep1 = document.querySelector(".steps");
   //let footstep1 = document.querySelector(".buttonfield");
 
   document.querySelector(".topnav").classList.add("hidden");
@@ -161,28 +163,42 @@ function addToCart() {
 
   document.querySelector("header").appendChild(headstep1);
   headstep1.classList.remove("hidden");
-  //document.querySelector("footer").appendChild(footstep1);
-  step = 1;
+
+  profileStep.style.color = "red";
+  profileStep.style.fontWeight = "bold";
 }
 
-var form = document.getElementById("profile-form");
-form.addEventListener("submit", nextStep);
+step1.addEventListener("submit", step1to2);
 
-function nextStep(event) {
+var step2 = document.querySelector("#step2");
+
+var adressStep = document.getElementById("adress-step");
+
+function step1to2(event) {
   event.preventDefault();
 
-  if (step == 1) {
-    step = 2;
+  step1.classList.add("hidden");
 
-    step1.classList.add("hidden");
+  step2.classList.remove("hidden");
 
-    var step2 = document.querySelector("#step2");
-    step2.classList.remove("hidden");
+  mainContainer.appendChild(step2);
 
-    mainContainer.appendChild(step2);
-  }
+  profileStep.style.color = "black";
+  profileStep.style.fontWeight = "normal";
 
-  if (step == 2) {
-    console.log("PASAR A STEP3");
-  }
+  adressStep.style.color = "red";
+  adressStep.style.fontWeight = "bold";
+}
+
+var step3 = document.querySelector("#step3");
+step2.addEventListener("submit", step2to3);
+
+function step2to3(event) {
+  event.preventDefault();
+
+  step2.classList.add("hidden");
+
+  step3.classList.remove("hidden");
+
+  mainContainer.appendChild(step3);
 }
