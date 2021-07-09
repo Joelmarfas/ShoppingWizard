@@ -1,4 +1,4 @@
-// Jose code starts here
+// Jose code starts here;
 
 function ShowAndHideDiv(form, classElement) {
   var element = document.getElementById(form);
