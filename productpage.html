@@ -63,7 +63,7 @@
               <option value="LXL">L/XL</option>
             </select>
             </div>
-            <button class="add-to-cart" onclick="move25()" id="cart">Add to cart</button>
+            <button class="add-to-cart" onclick="setTimeout(TimeOut,60000); onclick=move25()" id="cart">Add to cart</button>
         </div>
 
 
@@ -82,42 +82,43 @@
                         <p>Shipping</p>
                         <p>Finish</p>
                     </div>
-                    <form id="step1">
-                        <h3>Profile</h3>
-                        <label for="uname">Username</label>
-                        <input type="text" id="uname" name="uname" maxlength="20" minlength="5" pattern="[A-Za-z0-9\s]{7,15}" placeholder="MotherOfDragons" required />
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required maxlength="50" placeholder="dontfireatme@ihavedragons.com" />
-                        <label for="psw">Password</label>
-                        <input type="password" id="psw" name="psw" maxlength="20" minlength="8" pattern="[A-Za-z0-9-/_-*+.\s]" placeholder="Use one of this elements in your password '/_-*+.'" required />
-                        <label for="cpassword">Confirm Password</label>
-                        <input type="password" id="cpassword" name="cpassword" maxlength="20" minlength="8" placeholder="repeat the same password" required />
-                        <div id="message">
-                            <h3>Password must contain the following:</h3>
-                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                            <p id="number" class="invalid">A <b>number</b></p>
-                            <p id="length" class="invalid">Minimum <b>5 characters</b></p>
-                        </div>
-                        <div class="buttonfield">
-                            <button class="buttonStyleBlack" onclick="move25()" type="reset" value="Clear form">Clear form</button>
-                            <input class="buttonStyleWhite" id="submit" type="submit" value="Next" />
-                        </div>
                 </div>
+                <form id="step1">
+                    <h3>Profile</h3>
+                    <label for="uname">Username</label>
+                    <input type="text" id="uname" name="uname" maxlength="20" minlength="5" pattern="[A-Za-z0-9\s]{7,15}" placeholder="MotherOfDragons" required />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required maxlength="50" placeholder="dontfireatme@ihavedragons.com" />
+                    <label for="psw">Password</label>
+                    <input type="password" id="psw" name="psw" maxlength="20" minlength="8" pattern="[A-Za-z0-9-/_-*+.\s]" placeholder="Use one of this elements in your password '/_-*+.'" required />
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" id="cpassword" name="cpassword" maxlength="20" minlength="8" placeholder="repeat the same password" required />
+                    <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>5 characters</b></p>
+                    </div>
+                    <div class="buttonfield">
+                        <button class="buttonStyleBlack" onclick="move25()" type="reset" value="Clear form">Clear form</button>
+                        <input class="buttonStyleWhite" id="submit" type="submit" value="Next" />
+                    </div>
+            </div>
 
-                <!-- This is the step details -->
-                <div id="step2">
-                    <form>
-                        <h3>Order details</h3>
-                        <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
-                        <input type="text" pattern="[A-Za-z\s]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
-                        </br>
-                        <label for="lastName"><i class="fa fa-user"></i>  Last Name</label>
-                        <input type="text" pattern="[A-Za-z\s]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName" placeholder="Targaryen"></input>
-                        </br>
-                        <label><i class="fa fa-user"></i>Birthday</label>
-                        <div class="box">
-                            <select for="birthdayDay" required>
+            <!-- This is the step details -->
+            <div id="step2">
+                <form>
+                    <h3>Order details</h3>
+                    <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
+                    <input type="text" pattern="[A-Za-z\s]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
+                    </br>
+                    <label for="lastName"><i class="fa fa-user"></i>  Last Name</label>
+                    <input type="text" pattern="[A-Za-z\s]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName" placeholder="Targaryen"></input>
+                    </br>
+                    <label><i class="fa fa-user"></i>Birthday</label>
+                    <div class="box">
+                        <select for="birthdayDay" required>
                             <option type="text" id="birthdayDay" value>Day</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -151,7 +152,7 @@
                             <option value="30">30</option>
                             <option value="31">31</option>
                             </select>
-                            <select for="birthdayMonth" required>
+                        <select for="birthdayMonth" required>
                             <option type="text" id="birthdayMonth" value>Month</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -166,7 +167,7 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                            <select for="birthdayYear" required>
+                        <select for="birthdayYear" required>
                             <option type="text" id="birthdayYear" value>Year</option>
                             <option value="year">2003</option>
                             <option value="year">2002</option>
@@ -245,10 +246,10 @@
                             <option>The Crownlands</option>
                             <option>Dorne</option>
                         </select>
-                        </div>
-                        </br>
-                        <label for="countryCode">  Phone number</label>
-                        <select id="output" onchange="countryCode()">
+                    </div>
+                    </br>
+                    <label for="countryCode">  Phone number</label>
+                    <select id="output" onchange="countryCode()">
                     <input type="text" id="phoneNumber" pattern="[0-9\s]{7,12}" placeholder="Enter your phone here"></input>
                 </br>
                     <label for="postalCode">  Postal Code</label>
@@ -259,20 +260,20 @@
                 </br>
                 </br>
                     <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
-                    <input type="text" pattern="[A-Za-z\s]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
+                    <input type="text" pattern="[A-Za-z\s]{2,20}" id="firstName2" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
                 </br>
                     <label for="lastName"><i class="fa fa-user"></i>  Last Name</label>
-                    <input type="text" pattern="[A-Za-z\s]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName" placeholder="Targaryen"></input>
+                    <input type="text" pattern="[A-Za-z\s]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName2" placeholder="Targaryen"></input>
                 </br>
                     <label for="address"><i class="fa fa-address-card"></i>  Address</label>
-                    <input type="text" id="address" pattern="[A-Za-z0-9-\s]{5,50}" placeholder="Red Fortress" required></input>
+                    <input type="text" id="address2" pattern="[A-Za-z0-9-\s]{5,50}" placeholder="Red Fortress" required></input>
                 </br>
                     <label for="city"><i class="fa fa-institution"></i>  City</label>
                     <input type="text" pattern="[A-Za-z-\s]{5,50}" id="city" name="city" placeholder="King´s Landing">
                 </br>
                     <label for="country">  Country</label>
             <div class="box">
-                <select id="input" onchange="countryCode()">
+                <select id="input2" onchange="countryCode()">
                     <option>Select your country</option>
                     <option>The North</option>
                     <option>The Vale</option>
@@ -284,54 +285,54 @@
                     <option>The Crownlands</option>
                     <option>Dorne</option>
                 </select>
+            </div>
+            </br>
+            <label for="postalCode">  Postal Code</label>
+            <input type="text" id="postalCode2" pattern="[0-9\s]{4,6}" name="zip" placeholder="15001">
+            <div class="buttonfield">
+                <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
+                <input class="buttonStyleWhite" id="submit" type="submit" onclick="move50()" value="Next" /><br />
+            </div>
+            </form>
+        </div>
+
+        <!-- THIS IS THE SHIPPING STEP-->
+        <div class="transitionElements">
+            <form id="step3" class="shipping hidden" action="shipping">
+                <h2>Shipping</h2>
+                <h4>Shipping type</h4>
+                <div>
+                    <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required /> Free shipment (72h)</input>
                 </div>
-                </br>
-                <label for="postalCode">  Postal Code</label>
-                <input type="text" id="postalCode" pattern="[0-9\s]{4,6}" name="zip" placeholder="15001">
+                <div>
+                    <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2" /> Extra shipping (48h)<span style="font-weight: bold">4,99€</span></input>
+                </div>
+                <div>
+                    <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1" /> Premium (24h)
+                    <span style="font-weight: bold">9,99€</span>
+                </div>
+                <div id="estimated-time">
+                </div>
+                <div id="checkbox-div">
+                    <input type="checkbox" for="gift" name="gift" id="gift" /> Is it a gift?</input>
+                </div>
+
+                <div class="flex-form invisible">
+                    <label for="message">Gift message</label>
+                    <textarea name="message" id="textarea" cols="30" rows="10" maxlength="200"></textarea>
+                </div>
+
+                <div class="flex-form invisible">
+                    <label for="file">Gift wrapper image</label>
+                    <input type="file" class="fileSelect" id="file" name="file" accept="image/png, image/jpeg" />
+                </div>
                 <div class="buttonfield">
                     <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
-                    <input class="buttonStyleWhite" id="submit" type="submit" onclick="move50()" value="Next" /><br />
+                    <input class="buttonStyleWhite" id="submit3" type="submit" value="Next" />
                 </div>
-                </form>
-            </div>
-
-            <!-- THIS IS THE SHIPPING STEP-->
-            <div class="transitionElements">
-                <form id="step3" class="shipping hidden" action="shipping">
-                    <h2>Shipping</h2>
-                    <h4>Shipping type</h4>
-                    <div>
-                        <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required /> Free shipment (72h)</input>
-                    </div>
-                    <div>
-                        <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2" /> Extra shipping (48h)<span style="font-weight: bold">4,99€</span></input>
-                    </div>
-                    <div>
-                        <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1" /> Premium (24h)
-                        <span style="font-weight: bold">9,99€</span>
-                    </div>
-                    <div id="estimated-time">
-                    </div>
-                    <div id="checkbox-div">
-                        <input type="checkbox" for="gift" name="gift" id="gift" /> Is it a gift?</input>
-                    </div>
-
-                    <div class="flex-form invisible">
-                        <label for="message">Gift message</label>
-                        <textarea name="message" id="textarea" cols="30" rows="10" maxlength="200"></textarea>
-                    </div>
-
-                    <div class="flex-form invisible">
-                        <label for="file">Gift wrapper image</label>
-                        <input type="file" class="fileSelect" id="file" name="file" accept="image/png, image/jpeg" />
-                    </div>
-                    <div class="buttonfield">
-                        <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
-                        <input class="buttonStyleWhite" id="submit3" type="submit" value="Next" />
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
+    </div>
     </div>
     </div>
     <footer>
@@ -339,10 +340,6 @@
             Todos los derechos Reservados: Antonio Copete, José Valenzuela y Joel Martínez
         </p>
     </footer>
-
-
-
-
     <script type="text/javascript " src="script.js "></script>
     <script src="app.js "></script>
 </body>
