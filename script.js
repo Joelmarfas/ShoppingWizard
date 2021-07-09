@@ -1,3 +1,5 @@
+// Jose code starts here
+
 function ShowAndHideDiv(form, classElement) {
     var element = document.getElementById(form);
     if (element.className == "display") {
@@ -15,32 +17,20 @@ function ShowAndHideDiv(form, classElement) {
     }
 }
 
-// The data/time we want to countdown to
-var countDownDate = new Date("Jul 25, 2021 00:00:00").getTime();
+var startingMinutes = 9;
+var time = startingMinutes * 60;
 
-// Run myfunc every second
-var myfunc = setInterval(function() {
-    // set interval calls the date and puts it in miliseconds
-    var now = new Date().getTime();
-    var timeleft = countDownDate - now;
+var countDownElement = document.getElementById("countdown");
+setInterval(updateCountdown, 1000);
 
-    // Calculating the minutes and seconds left
-    var minutes = Math.floor((timeleft % (250 * 60 * 60)) / (1000 * 60));
-    //var seconds = Math.floor((timeleft % (60 * 60)) / 1000);
+function updateCountdown() {
+    var minutes = Math.floor(time / 60); //Take all seconds and divide by 60 to get the minutes
+    var seconds = time % 60;
 
-    // Result is output to the specific element
-    document.getElementById("mins").innerHTML = minutes + " " + "minutes ";
-    document.getElementById("secs").innerHTML = minutes + " " + "seconds ";
-
-    // Display the message when countdown is over
-    if (timeleft < 0) {
-        clearInterval(myfunc);
-        document.getElementById("mins").innerHTML = "";
-        document.getElementById("secs").innerHTML = "";
-        document.getElementById("end").innerHTML =
-            "Time is up! You will now be redirected to the product page";
-    }
-}, 1000);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    countDownElement.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+}
 
 function countryCode() {
     var allCodes = document.getElementById("input").value;
@@ -71,9 +61,4 @@ function countryCode() {
     document.getElementById("output").innerHTML = string;
 }
 
-/*allCodes.onchange = function myCountryCode() {
-                var myCountryCode = [];
-                switch (myCountryCode) {
-                    case "Stark";
-                    countryCode = "+34";
-                    break;*/
+// Jose code ends here

@@ -61,7 +61,7 @@
               <option value="LXL">L/XL</option>
             </select>
             </div>
-            <button class="add-to-cart" id="cart">Add to cart</button>
+            <button onclick="myTimeStarts()" class="add-to-cart" id="cart">Add to cart</button>
 
             <div class="sizes-guide">Guía de tallas</div>
 
@@ -75,9 +75,6 @@
     </div>
 
     <!-- This is my code. I need to include address: first name, last name, birthday (dd/mm/yyyy), address 1, postal code, country, phone, include optional (billing same as shipping address)-->
-    <p id="mins"></p>
-    <p id="secs"></p>
-    <h2 id="end"></h2>
 
     <div class="transitionElements">
         <div class="steps">
@@ -87,9 +84,10 @@
             <p>Finish</p>
         </div>
 
+        <div id="countdown"></div>
+        <div id="countdown2"></div>
         <form>
             <h3>Order details</h3>
-            <p onclick="ShowAndHideDiv('divId', 'show')">Timer</p>
             <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
             <input type="text" pattern="[A-Za-z]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
             </br>
