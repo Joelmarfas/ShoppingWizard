@@ -17,7 +17,7 @@ function ShowAndHideDiv(form, classElement) {
   }
 }
 
-var startingMinutes = 9;
+var startingMinutes = 5;
 var time = startingMinutes * 60;
 
 var countDownElement = document.getElementById("countdown");
@@ -30,6 +30,84 @@ function updateCountdown() {
   seconds = seconds < 10 ? "0" + seconds : seconds;
   countDownElement.innerHTML = `${minutes}: ${seconds}`;
   time--;
+}
+
+var i = 0;
+
+function move25() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 15);
+
+        function frame() {
+            if (width >= 25) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
+    }
+}
+
+function move50() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 15);
+
+        function frame() {
+            if (width >= 50) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
+    }
+}
+
+function move75() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 15);
+
+        function frame() {
+            if (width >= 75) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
+    }
+}
+
+function move100() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 15);
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+            }
+        }
+    }
 }
 
 function countryCode() {

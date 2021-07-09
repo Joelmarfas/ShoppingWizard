@@ -146,10 +146,12 @@ var mainContainer = document.querySelector(".main-container");
 var step1 = document.getElementById("step1");
 var profileStep = document.getElementById("profile-step");
 
+var firstContainer = document.querySelector(".first-container");
+var secondContainer = document.querySelector(".second-container");
 function addToCart() {
-  for (mainContainerElement of mainContainerElements) {
-    mainContainerElement.classList.add("hidden");
-  }
+  console.log("HOLA");
+  firstContainer.classList.add("hidden");
+  secondContainer.classList.add("hidden");
 
   var headstep1 = document.querySelector(".steps");
   //let footstep1 = document.querySelector(".buttonfield");
@@ -164,11 +166,13 @@ function addToCart() {
 
   profileStep.style.color = "red";
   profileStep.style.fontWeight = "bold";
+  mainContainer.className.add("transitionElements");
 }
 
 step1.addEventListener("submit", step1to2);
 
 var step2 = document.querySelector("#step2");
+var headstep2 = document.querySelector("#timer");
 
 var adressStep = document.getElementById("adress-step");
 
