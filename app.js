@@ -207,4 +207,5 @@ function step2to3(event) {
 
   shippingStep.style.color = "red";
   shippingStep.style.fontWeight = "bold";
+  //
 }
