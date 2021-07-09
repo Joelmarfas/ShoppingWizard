@@ -141,6 +141,7 @@ function shipmentDate(e) {
 
   estimated.innerHTML = estimatedTime;
 }
+var mainContainer = document.querySelector(".main-container");
 
 var step1 = document.getElementById("step1");
 var profileStep = document.getElementById("profile-step");
@@ -150,18 +151,15 @@ function addToCart() {
     mainContainerElement.classList.add("hidden");
   }
 
-  var mainContainer = document.querySelector(".main-container");
-
   var headstep1 = document.querySelector(".steps");
   //let footstep1 = document.querySelector(".buttonfield");
 
   document.querySelector(".topnav").classList.add("hidden");
   document.querySelector("footer > p").classList.add("hidden");
 
-  mainContainer.appendChild(step1);
+  //mainContainer.appendChild(step1);
   step1.classList.remove("hidden");
 
-  document.querySelector("header").appendChild(headstep1);
   headstep1.classList.remove("hidden");
 
   profileStep.style.color = "red";
@@ -183,7 +181,7 @@ function step1to2(event) {
 
   mainContainer.appendChild(step2);
 
-  profileStep.style.color = "black";
+  profileStep.style.color = "orange";
   profileStep.style.fontWeight = "normal";
 
   adressStep.style.color = "red";
@@ -193,6 +191,8 @@ function step1to2(event) {
 var step3 = document.querySelector("#step3");
 step2.addEventListener("submit", step2to3);
 
+shippingStep = document.getElementById("shipping-step");
+
 function step2to3(event) {
   event.preventDefault();
 
@@ -201,4 +201,10 @@ function step2to3(event) {
   step3.classList.remove("hidden");
 
   mainContainer.appendChild(step3);
+
+  adressStep.style.color = "orange";
+  adressStep.style.fontWeight = "normal";
+
+  shippingStep.style.color = "red";
+  shippingStep.style.fontWeight = "bold";
 }
