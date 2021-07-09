@@ -55,3 +55,14 @@ myInput.onkeyup = function () {
     length.classList.add("invalid");
   }
 };
+
+//Passsword matching
+function matchPassword() {
+  var pw1 = document.getElementById("psw");
+  var pw2 = document.getElementById("cpassword");
+  if (pw1.textContent !== pw2.textContent) {
+    alert("Passwords did not match");
+  } else {
+    alert("Password created successfully");
+  }
+}

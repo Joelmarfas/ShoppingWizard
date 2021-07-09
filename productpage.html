@@ -336,6 +336,7 @@
         name="uname"
         maxlength="20"
         minlength="5"
+        pattern="^\S*$"
         required
       /><br />
       <label for="email">Email:</label><br />
@@ -348,26 +349,27 @@
       /><br />
       <label for="psw">Password:</label><br />
       <input
-        type="password"
+        type="text"
         id="psw"
         name="psw"
         maxlength="20"
         minlength="8"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])"
+        pattern="[A-Za-z0-9-/_-*+]"
         required
       /><br />
       <label for="cpassword">Confirm Password:</label><br />
       <input
-        type="password"
+        type="text"
         id="cpassword"
         name="cpassword"
         maxlength="20"
         minlength="8"
+        pattern="[A-Za-z0-9-/_-*+]"
         required
       /><br />
       <div class="buttonfield">
         <button type="reset" value="Clear form">Clear form</button>
-        <input id="submit" type="submit" value="Next" /><br />
+        <input id="submit" type="submit" value="Next" onclick="matchPassword()" /><br />
       </div>
     </form>
   </div>
@@ -447,6 +449,35 @@
       </form>
     </div>
     <script src="app.js"></script>
+
+    <!-- Thanks you page (Joel) -->
+
+    <div class="main-container">
+      <!--Steps menu-->
+      <div class="steps">
+        <p>Profile</p>
+        <p>Adress</p>
+        <p>Shipping</p>
+        <p>Finish</p>
+      </div>
+            <!--Your order is complete-->
+            <p>
+              <strong>Your order is complete!</strong>  <br> 
+              Thank you for your order!
+            </p>
+
+            <!--block your purchase-->
+            <div>
+              <p><strong>Your purchase</strong></p>
+            </div>
+
+            <!--block payment details-->
+            <div>
+              <p><strong>Payment details</strong></p>
+            </div>
+
+      </div>
+    </div>
 
   </body>
 
