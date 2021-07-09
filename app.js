@@ -1,7 +1,3 @@
-var storeColor = "black";
-var storeSize = "";
-var step = 0;
-
 /* SELECTORS */
 var giftCheckbox = document.getElementById("gift");
 var giftTextArea = document.getElementById("textarea");
@@ -17,11 +13,7 @@ var zoomImages = document.querySelectorAll(".small-images > img");
 var colorImages = document.querySelectorAll(".color-container img");
 var bigImage = document.querySelector(".big-images > img");
 
-var sizeOptions = document.getElementById("size");
-
 /* EVENTS */
-sizeOptions.addEventListener("change", getSize);
-
 for (colorImage of colorImages) {
   colorImage.addEventListener("click", changeColor);
 }
@@ -37,10 +29,6 @@ for (radioButton of radioButtons) {
 carButton.addEventListener("click", addToCart);
 
 /* EVENT FUNCTIONS */
-
-function getSize(e) {
-  storeSize = e.target.value;
-}
 
 // Turn small mic in BIG PIC
 function zoomIn(e) {
@@ -61,8 +49,6 @@ function changeColor(e) {
   }
   zoomImages[0].style.borderColor = "black";
   e.target.style.borderColor = "black";
-
-  storeColor = e.target.id;
 
   switch (e.target.id) {
     case "black":
@@ -190,7 +176,7 @@ function nextStep(event) {
 
     step1.classList.add("hidden");
 
-    var step2 = document.querySelector(".container");
+    var step2 = document.querySelector("#step2");
     step2.classList.remove("hidden");
 
     mainContainer.appendChild(step2);
@@ -200,6 +186,3 @@ function nextStep(event) {
     console.log("PASAR A STEP3");
   }
 }
-
-//var form2 = document.getElementById("form-adress");
-//form2.addEventListener("submit", nextStep);

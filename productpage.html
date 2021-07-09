@@ -8,92 +8,73 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./joel.js" defer></script>
-    <title>ShoppingWizard</title></head>
-    
+    <title>ShoppingWizard</title>
+</head>
+
 </head>
 
 <body>
   
-    <header>
+  <header>
       
-        <img class="topnav " src="https://i.postimg.cc/XY5VxfdQ/Assembler-School-of-Software-Engineering-logo.jpg" alt="Assembler School" />
-    </header>
-    <div class="main-container">
-        <div class="first-container">
-          <div class="small-images">
-            <img
-              id="small1"
-              class="img-select"
-              src="gorras/black-main.jpg"
-              alt="gorra principal"
-            />
-            <img
-              id="small2"
-              class="img-select"
-              src="gorras/black-boy.jpg"
-              alt="gorra chico"
-            />
-            <img
-              id="small3"
-              class="img-select"
-              src="gorras/black-girl.jpg"
-              alt="gorra chica"
-            />
-            <img
-              id="small4"
-              class="img-select"
-              src="gorras/black-white.jpg"
-              alt="gorra detras"
-            />
-          </div>
-          <div class="big-images">
-            <img src="gorras/black-main.jpg" alt="gorra principal" />
-          </div>
+    <img class="topnav " src="https://i.postimg.cc/XY5VxfdQ/Assembler-School-of-Software-Engineering-logo.jpg" alt="Assembler School" />
+  </header>
+  <div class="main-container">
+    <div class="first-container">
+      <div class="small-images">
+        <img id="small1" class="img-select" src="gorras/black-main.jpg" alt="gorra principal" />
+        <img id="small2" class="img-select" src="gorras/black-boy.jpg" alt="gorra chico" />
+        <img id="small3" class="img-select" src="gorras/black-girl.jpg" alt="gorra chica" />
+        <img id="small4" class="img-select" src="gorras/black-white.jpg" alt="gorra detras" />
+      </div>
+    <div class="big-images">
+      <img src="gorras/black-main.jpg" alt="gorra principal" />
+    </div>
+    </div>
+    <div class="second-container">
+      <div class="product-info">
+        <div class="brand-info">Assembler School</div>
+        <div class="model-info">CLASSIC - Gorra</div>
+        <div class="price-info">20,95€</div>
+        <div class="discount-code">
+          Aplica el código 15VERANO y consigue un -15% EXTRA en lo último en rebajas ¡Queda poco tiempo!
         </div>
-        <div class="second-container">
-            <div class="product-info">
-                <div class="brand-info">Assembler School</div>
-                <div class="model-info">CLASSIC - Gorra</div>
-                <div class="price-info">20,95€</div>
-                <div class="discount-code">
-                    Aplica el código 15VERANO y consigue un -15% EXTRA en lo último en rebajas ¡Queda poco tiempo!
-                </div>
-            </div>
-          <ul class="color-container">
-            <li>
-              <img
-                id="black"
-                class="img-select"
-                src="gorras/black-main.jpg"
-                alt="gorra negra"
-              />
+      </div>
+      <ul class="color-container">
+        <li>
+          <img
+            id="black"
+            class="img-select"
+            src="gorras/black-main.jpg"
+            alt="gorra negra"
+          />
+        </li>
+        <li>
+        <img
+          id="orange"
+          class="img-select"
+          src="gorras/orange-main.jpg"
+          alt="gorra naranja"
+        />
+        </li>
+        <li>
+          <img
+            id="pink"
+            class="img-select"
+            src="gorras/pink-main.jpg"
+            alt="gorra rosa"
+          />
+          </li>
+           <li>
+            <img
+              id="white"
+              class="img-select"
+              src="gorras/white-main.jpg"
+              alt="gorra blanca"
+            />
             </li>
-            <li>
-              <img
-                id="orange"
-                class="img-select"
-                src="gorras/orange-main.jpg"
-                alt="gorra naranja"
-              />
-            </li>
-            <li>
-              <img
-                id="pink"
-                class="img-select"
-                src="gorras/pink-main.jpg"
-                alt="gorra rosa"
-              />
-            </li>
-            <li>
-              <img
-                id="white"
-                class="img-select"
-                src="gorras/white-main.jpg"
-                alt="gorra blanca"
-              />
-            </li>
-          </ul>
-          <div class="size-container">
+      </ul>
+      <div class="size-container">
             <select name="size-selector" id="size">
               <option value="sizes" selected disabled>Elija una talla</option>
               <option value="XSS">XS/S</option>
@@ -101,46 +82,36 @@
               <option value="ML">M/L</option>
               <option value="LXL">L/XL</option>
             </select>
-          </div>
-          <button class="add-to-cart" id="cart">Add to cart</button>
-
-          <div class="sizes-guide">Guía de tallas</div>
-
-          <p>
-                Cómo encontrar tu talla1. CABEZARodea tu cabeza con una cinta métrica flexible a la altura de las sienes, justo por encima de las cejas. Usa esa medida para determinar tu talla de gorra. Encuentrala talla adecuada de explicar que de hacer. Porque, ¿y
-                si estás justo entre dos tallas? En ese caso, te recomendamos que elijas la talla más grande. ¿Y sabes qué? Puedes probarte la ropa en casa. ¿Y si no es tu talla? ¡No te preocupes! Puedes devolver los artículos en un plazo de 7 días. Para
-                más información, consulta nuestra política de devoluciones.
-          </p>
-          <img src="" alt="" />
-        </div>
       </div>
-      <footer>
-        <p>
-            Todos los derechos Reservados: Antonio Copete, José Valenzuela y Joel Martínez
-        </p>
-    </footer>
+      <button onclick="myTimeStarts()" class="add-to-cart" id="cart">Add to cart</button>
 
+      
     </div>
+  </div>
 
     <!-- This is my code. I need to include address: first name, last name, birthday (dd/mm/yyyy), address 1, postal code, country, phone, include optional (billing same as shipping address)-->
-    <p id="mins"></p>
-    <p id="secs"></p>
-    <h2 id="end"></h2>
 
-    <article class="container hidden">
-        <div class="row">
-            <form id="form-adress">
-                <h3>Order details</h3>
-                <p onclick="ShowAndHideDiv('divId', 'show')">Timer</p>
-                <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
-                <input type="text" pattern="[A-Za-z]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
-                </br>
-                <label for="lastName"><i class="fa fa-user"></i>  Last Name</label>
-                <input type="text" pattern="[A-Za-z]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName" placeholder="Targaryen"></input>
-                </br>
-                <label><i class="fa fa-user"></i>Birthday</label>
-                <div class="box">
-                    <select for="birthdayDay" required>
+    <div class="transitionElements">
+        <div id="step2" class="steps">
+            <p>Profile</p>
+            <p>Adress</p>
+            <p>Shipping</p>
+            <p>Finish</p>
+        </div>
+
+        <div id="countdown"></div>
+        <div id="countdown2"></div>
+        <form>
+            <h3>Order details</h3>
+            <label for="firstName"><i class="fa fa-user"></i>  First Name</label>
+            <input type="text" pattern="[A-Za-z]{2,20}" id="firstName" title="Must contain between 2 and 20 characters at least" placeholder="Daenerys" required></input>
+            </br>
+            <label for="lastName"><i class="fa fa-user"></i>  Last Name</label>
+            <input type="text" pattern="[A-Za-z]{2,20}" title="Must contain between 2 and 20 characters at least" id="lastName" placeholder="Targaryen"></input>
+            </br>
+            <label><i class="fa fa-user"></i>Birthday</label>
+            <div class="box">
+                <select for="birthdayDay" required>
                     <option type="text" id="birthdayMonth" value>Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -174,7 +145,7 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                     </select>
-                    <select for="birthdayMonth" required>
+                <select for="birthdayMonth" required>
                   <option type="text" id="birthdayMonth" value>Month</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -189,7 +160,7 @@
                   <option value="11">11</option>
                   <option value="12">12</option>
                 </select>
-                    <select for="birthdayYear" required>
+                <select for="birthdayYear" required>
                 <option type="text" id="birthdayYear" value>Year</option>
                 <option value="year">2003</option>
                 <option value="year">2002</option>
@@ -246,17 +217,17 @@
                 <option value="year">1951</option>
                 <option value="year">1950</option>
                 </select>
-                </div>
-                </br>
-                <label for="address"><i class="fa fa-address-card"></i>  Address</label>
-                <input type="text" id="address" pattern="[A-Za-z0-9-]{5,50}" placeholder="Red Fortress" required></input>
-                </br>
-                <label for="city"><i class="fa fa-institution"></i>  City</label>
-                <input type="text" pattern="[A-Za-z-]{5,50}" id="city" name="city" placeholder="King´s Landing">
-                </br>
-                <label for="country">  Country</label>
-                <div class="box">
-                    <select id="input" onchange="countryCode()">
+            </div>
+            </br>
+            <label for="address"><i class="fa fa-address-card"></i>  Address</label>
+            <input type="text" id="address" pattern="[A-Za-z0-9-]{5,50}" placeholder="Red Fortress" required></input>
+            </br>
+            <label for="city"><i class="fa fa-institution"></i>  City</label>
+            <input type="text" pattern="[A-Za-z-]{5,50}" id="city" name="city" placeholder="King´s Landing">
+            </br>
+            <label for="country">  Country</label>
+            <div class="box">
+                <select id="input" onchange="countryCode()">
                       <option>Select your country</option>
                     <option>The North</option>
                     <option>The Vale</option>
@@ -268,17 +239,17 @@
                     <option>The Crownlands</option>
                     <option>Dorne</option>
                 </select>
-                </div>
-                </br>
-                <label for="countryCode">  Phone number</label>
-                <select id="output" onchange="countryCode()">
+            </div>
+            </br>
+            <label for="countryCode">  Phone number</label>
+            <select id="output" onchange="countryCode()">
                 <input type="text" id="phoneNumber" pattern="[0-9]{7,9}" placeholder="Enter your phone here"></input>
                 </br>
                 <label for="postalCode">  Postal Code</label>
                 <input type="text" id="postalCode" pattern="[0-9]{4,6}" name="zip" placeholder="15001">
-                <h3>Is your billing address different?</h3>
-                <input type="radio" name="radioShow" value="Yes, it is" onclick="ShowAndHideDiv('divId', 'show')">Yes, it is.</input>
-                <input type="radio" name="radioShow" value="Hide div" onclick="ShowAndHideDiv('divId', 'hide')">No, it is the same as above.</input>
+                <h3 class="alignRight">Is your billing address different?</h3>
+                <input class="alignRight" type="radio" name="radioShow" value="Yes, it is" onclick="ShowAndHideDiv( 'divId', 'show')">   Yes, it is.</input>
+                <input class="alignRight" type="radio" name="radioShow" value="Hide div" onclick="ShowAndHideDiv( 'divId', 'hide')">   No, it is the same as above.</input>
                 </br>
                 </br>
                 <div id="divId" class="hide">
@@ -308,18 +279,53 @@
                         <option>The Crownlands</option>
                         <option>Dorne</option>
                     </select>
+    </div>
+    </br>
+    <label for="postalCode">  Postal Code</label>
+    <input type="text" id="postalCode" pattern="[0-9]{4,6}" name="zip" placeholder="15001">
+    </div>
+    <div class="buttonfield">
+        <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
+        <input class="buttonStyleWhite" id="submit" type="submit" value="Next" /><br />
+    </div>
+    </form>
+    </div>
+    <div id="step1" class="transitionElements">
+        <div class="steps">
+            <p>Profile</p>
+            <p>Adress</p>
+            <p>Shipping</p>
+            <p>Finish</p>
         </div>
-        </br>
-        <label for="postalCode">  Postal Code</label>
-        <input type="text" id="postalCode" pattern="[0-9]{4,6}" name="zip" placeholder="15001">
-        </div>
-        <button>Submit</button>
-        </form>
-        </div>
-    </article>
-    
-    <script type="text/javascript " src="script.js "></script>
 
+        <form>
+            <h3>Profile</h3>
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" maxlength="20" minlength="5" placeholder="MotherOfDragons" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="50" placeholder="dontfireatme@ihavedragons.com" />
+            <label for="psw">Password</label>
+            <input type="password" id="psw" name="psw" maxlength="20" minlength="8" pattern="[A-Za-z0-9-/_-*+.]" placeholder="Use one of this elements in your password '/_-*+.'" required />
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" maxlength="20" minlength="8" placeholder="repeat the same password" required />
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>5 characters</b></p>
+            </div>
+            <div class="buttonfield">
+                <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
+                <input class="buttonStyleWhite" id="submit" type="submit" value="Next" />
+
+            </div>
+
+        </form>
+
+    </div>
+  
+<!--
 
 <div>
   <div class="steps hidden">
@@ -331,7 +337,7 @@
   <div class="hidden" id="step1">
     <h3>Profile</h3>
     <form id="profile-form">
-      <label for="uname">Username:</label><br />
+      <label for="uname">Username HOLA:</label><br />
       <input
         type="text"
         id="uname"
@@ -355,7 +361,7 @@
         name="psw"
         maxlength="20"
         minlength="8"
-        <!--pattern="[A-Za-z0-9-/_-*+]"
+        pattern="[A-Za-z0-9-/_-*+]"
         required
       /><br />
       <label for="cpassword">Confirm Password:</label><br />
@@ -384,74 +390,60 @@
     </form>
   </div>
 </div>
+ -->
 
+  <div class="transitionElements">
+      <div class="steps">
+          <p>Profile</p>
+          <p>Adress</p>
+          <p>Shipping</p>
+          <p>Finish</p>
+      </div>
+      <form id="shipping" action="shipping">
+          <h2>Shipping</h2>
+          <h4>Shipping type</h4>
+          <div>
+              <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required /> Free shipment (72h)</input>
+          </div>
+          <div>
+              <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2" /> Extra shipping (48h)<span style="font-weight: bold">4,99€</span></input>
+          </div>
+          <div>
+              <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1" /> Premium (24h)
+              <span style="font-weight: bold">9,99€</span>
+          </div>
+          <div id="estimated-time">
+          </div>
+          <div id="checkbox-div">
+              <input type="checkbox" for="gift" name="gift" id="gift" /> Is it a gift?</input>
+          </div>
 
-    <div id="shipping-container">
-      <h2>Shipping</h2>
-      <h4>Shipping type</h4>
-      <form id="shipping">
-        <div class="shipping-div">
-          <input
-            type="radio"
-            name="shipping-time"
-            id="shipment-72h"
-            value="3"
-            required
-          />
-          <label for="shipment-72h">Free shipment (72h)</label>
-        </div>
+          <div class="flex-form invisible">
+              <label for="message">Gift message</label>
+              <textarea name="message" id="textarea" cols="30" rows="10" maxlength="200"></textarea>
+          </div>
 
-        <div class="shipping-div">
-          <input
-            type="radio"
-            name="shipping-time"
-            id="shipment-48h"
-            value="2"
-          />
-          <label for="shipment-48h"
-            >Extra shipping (48h) <span>4,99€</span></label
-          >
-        </div>
-
-        <div class="shipping-div">
-          <input
-            type="radio"
-            name="shipping-time"
-            id="shipment-24h"
-            value="1"
-          />
-          <label for="shipment-24h">Premium (24h) <span>9,99€</span></label>
-        </div>
-        <div id="estimated-time"></div>
-        <div class="shipping-div" id="checkbox-div">
-          <input type="checkbox" name="gift" id="gift" />
-          <label for="gift">Is it a gift?</label>
-        </div>
-
-        <div class="flex-form invisible">
-          <label for="message">Gift message</label>
-          <textarea
-            name="message"
-            id="textarea"
-            cols="30"
-            rows="10"
-            maxlength="200"
-          ></textarea>
-        </div>
-
-        <div class="flex-form invisible">
-          <label for="file">Gift wrapper image</label>
-          <input
-            type="file"
-            id="file"
-            name="file"
-            accept="image/png, image/jpeg"
-          />
-        </div>
+          <div class="flex-form invisible">
+              <label for="file">Gift wrapper image</label>
+              <input type="file" class="fileSelect" id="file" name="file" accept="image/png, image/jpeg" />
+          </div>
+          <div class="buttonfield">
+              <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
+              <input class="buttonStyleWhite" id="submit" type="submit" value="Next" />
+          </div>
       </form>
-    </div>
-    <script src="app.js"></script>
+  </div>
+  <footer>
+      <p>
+          Todos los derechos Reservados: Antonio Copete, José Valenzuela y Joel Martínez
+      </p>
+  </footer>
 
+
+
+
+    <script type="text/javascript " src="script.js "></script>
+    <script src="app.js "></script>
   </body>
 
 </html>
