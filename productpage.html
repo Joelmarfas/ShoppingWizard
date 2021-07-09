@@ -287,13 +287,13 @@
 
         <form>
             <h3>Profile</h3>
-            <label for="uname">Username:</label>
+            <label for="uname">Username</label>
             <input type="text" id="uname" name="uname" maxlength="20" minlength="5" placeholder="MotherOfDragons" required />
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required maxlength="50" placeholder="dontfireatme@ihavedragons.com" />
-            <label for="psw">Password:</label>
+            <label for="psw">Password</label>
             <input type="password" id="psw" name="psw" maxlength="20" minlength="8" pattern="[A-Za-z0-9-/_-*+.]" placeholder="Use one of this elements in your password '/_-*+.'" required />
-            <label for="cpassword">Confirm Password:</label>
+            <label for="cpassword">Confirm Password</label>
             <input type="password" id="cpassword" name="cpassword" maxlength="20" minlength="8" placeholder="repeat the same password" required />
             <div id="message">
                 <h3>Password must contain the following:</h3>
@@ -318,41 +318,38 @@
             <p>Shipping</p>
             <p>Finish</p>
         </div>
-        <h2>Shipping</h2>
-        <h4>Shipping type</h4>
-        <form id="shipping" action="shipping"></form>
-        <div>
-            <input type="radio" name="shipping-time" id="shipment-72h" value="3" required />
-            <label for="shipment-72h ">Free shipment (72h)</label>
-        </div>
+        <form id="shipping" action="shipping">
+            <h2>Shipping</h2>
+            <h4>Shipping type</h4>
+            <div>
+                <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required /> Free shipment (72h)</input>
+            </div>
+            <div>
+                <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2" /> Extra shipping (48h)<span style="font-weight: bold">4,99€</span></input>
+            </div>
+            <div>
+                <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1" /> Premium (24h)
+                <span style="font-weight: bold">9,99€</span>
+            </div>
+            <div id="estimated-time">
+            </div>
+            <div id="checkbox-div">
+                <input type="checkbox" for="gift" name="gift" id="gift" /> Is it a gift?</input>
+            </div>
 
-        <div>
-            <input type="radio" name="shipping-time" id="shipment-48h" value="2" />
-            <label for="shipment-48h">Extra shipping (48h) <span>4,99€</span></label>
-        </div>
-        <div>
-            <input type="radio" name="shipping-time" id="shipment-24h" value="1" />
-            <label for="shipment-24h ">Premium (24h) <span>9,99€</span></label>
-        </div>
-        <div id="estimated-time"></div>
-        <div id="checkbox-div">
-            <input type="checkbox" name="gift" id="gift" />
-            <label for="gift">Is it a gift?</label>
-        </div>
+            <div class="flex-form invisible">
+                <label for="message">Gift message</label>
+                <textarea name="message" id="textarea" cols="30" rows="10" maxlength="200"></textarea>
+            </div>
 
-        <div class="flex-form invisible">
-            <label for="message">Gift message</label>
-            <textarea name="message" id="textarea" cols="30" rows="10" maxlength="200"></textarea>
-        </div>
-
-        <div class="flex-form invisible">
-            <label for="file">Gift wrapper image</label>
-            <input type="file" id="file" name="file" accept="image/png, image/jpeg" />
-        </div>
-        <div class="buttonfield">
-            <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
-            <input class="buttonStyleWhite" id="submit" type="submit" value="Next" /><br />
-        </div>
+            <div class="flex-form invisible">
+                <label for="file">Gift wrapper image</label>
+                <input type="file" class="fileSelect" id="file" name="file" accept="image/png, image/jpeg" />
+            </div>
+            <div class="buttonfield">
+                <button class="buttonStyleBlack" type="reset" value="Clear form">Clear form</button>
+                <input class="buttonStyleWhite" id="submit" type="submit" value="Next" />
+            </div>
         </form>
     </div>
     <footer>

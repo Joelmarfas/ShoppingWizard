@@ -267,6 +267,11 @@ label {
     border-color: none;
 }
 
+.fileSelect {
+    padding: 1.5rem 0rem auto;
+    font-size: large;
+}
+
 
 /* 1 Step Joel */
 
@@ -344,7 +349,6 @@ label {
 #shipping {
     display: flex;
     flex-direction: column;
-    width: 65%;
     gap: 1rem;
 }
 
