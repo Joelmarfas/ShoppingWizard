@@ -30,13 +30,14 @@ carButton.addEventListener("click", addToCart);
 
 /* EVENT FUNCTIONS */
 
+// Turn small mic in BIG PIC
 function zoomIn(e) {
     bigImage.src = e.target.src;
     for (zoomImage of zoomImages) {
-        zoomImage.style.borderColor = "transparent";
+        zoomImage.style.borderColor = "transparent"; // Reset rest of borders
     }
 
-    e.target.style.borderColor = "black";
+    e.target.style.borderColor = "black"; // Put black border to the selected element after reset the rest
 }
 
 function changeColor(e) {
@@ -141,12 +142,68 @@ function shipmentDate(e) {
     estimated.innerHTML = estimatedTime;
 }
 
+var step1 = document.getElementById("step1");
+var profileStep = document.getElementById("profile-step");
+
 function addToCart() {
     for (mainContainerElement of mainContainerElements) {
         mainContainerElement.classList.add("hidden");
     }
 
     var mainContainer = document.querySelector(".main-container");
-    var shipping = document.getElementById("shipping-container");
-    mainContainer.appendChild(shipping);
+
+    var headstep1 = document.querySelector("#timer");
+    //let footstep1 = document.querySelector(".buttonfield");
+
+    document.querySelector(".topnav").classList.add("hidden");
+    document.querySelector("footer > p").classList.add("hidden");
+
+    mainContainer.appendChild(step1);
+    step1.classList.remove("hidden");
+
+    document.querySelector("header").appendChild(headstep1);
+    headstep1.classList.remove("hidden");
+
+    profileStep.style.color = "red";
+    profileStep.style.fontWeight = "bold";
+    mainContainer.className.add("transitionElements");
+}
+
+step1.addEventListener("submit", step1to2);
+
+var step2 = document.querySelector("#step2");
+var headstep2 = document.querySelector("#timer");
+
+var adressStep = document.getElementById("adress-step");
+
+function step1to2(event) {
+    event.preventDefault();
+
+    step1.classList.add("hidden");
+
+    step2.classList.remove("hidden");
+
+    mainContainer.appendChild(step2);
+
+    document.querySelector("header").appendChild(headstep1);
+    headstep1.classList.remove("hidden");
+
+    profileStep.style.color = "black";
+    profileStep.style.fontWeight = "normal";
+
+    adressStep.style.color = "red";
+    adressStep.style.fontWeight = "bold";
+}
+
+var step3 = document.querySelector("#step3");
+step2.addEventListener("submit", step2to3);
+
+function step2to3(event) {
+    event.preventDefault();
+
+    step2.classList.add("hidden");
+
+    step3.classList.remove("hidden");
+
+    mainContainer.appendChild(step3);
 }

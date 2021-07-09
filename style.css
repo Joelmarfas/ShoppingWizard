@@ -371,13 +371,24 @@ label {
     width: 100%;
 }
 
-#shipping {
+.shipping {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#shipping span {
+.shipping-div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+label {
+    margin: 0;
+}
+
+.shipping span {
     font-weight: bold;
 }
 
@@ -406,7 +417,16 @@ input {
     visibility: hidden;
 }
 
+#step1 {
+    width: 100%;
+}
+
+#small1,
+#black {
+    border-color: black;
+}
+
 .transitionElements {
-    width: 50%;
+    max-width: 50%;
     align-self: center;
 }
