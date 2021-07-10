@@ -104,6 +104,7 @@ function giftArea() {
   }
 }
 
+var shippingCost = 0.0; //Joel
 function shipmentDate(e) {
   estimated.innerHTML = "";
   var date = new Date();
@@ -111,14 +112,23 @@ function shipmentDate(e) {
 
   switch (e.target.value) {
     case "1":
+      shippingCost = 9.99; //Joel
+      orderShipping.innerHTML =
+        "Premium shipping: " + "<strong>" + shippingCost + "€</strong>"; //Joel
       date.setDate(date.getDate() + 1);
       nextDay.setDate(date.getDate() + 1);
       break;
     case "2":
+      shippingCost = 4.99; //Joel
+      orderShipping.innerHTML =
+        "Extra shipping: " + "<strong>" + shippingCost + "€</strong>"; //Joel
       date.setDate(date.getDate() + 2);
       nextDay.setDate(date.getDate() + 1);
       break;
     case "3":
+      shippingCost = 0.0; //Joel
+      orderShipping.innerHTML =
+        "Free shipping: " + "<strong>" + shippingCost + "€</strong>"; //Joel
       date.setDate(date.getDate() + 3);
       nextDay.setDate(date.getDate() + 1);
       break;
@@ -225,4 +235,34 @@ function step2to3(event) {
   shippingStep.style.color = "red";
   shippingStep.style.fontWeight = "bold";
   //
+}
+// JOEL
+step3.addEventListener("submit", step3to4);
+var step4 = document.getElementById("step4");
+var orderTotal = document.getElementById("order-total");
+var orderShipping = document.getElementById("order-shipping");
+
+function step3to4(event) {
+  event.preventDefault();
+  step3.classList.add("hidden");
+  step4.classList.remove("hidden");
+
+  var totalcost = shippingCost + 20.95;
+  var c = totalcost.toFixed(2);
+
+  orderTotal.innerHTML = "Total: " + "<strong>" + c + "€" + "</strong>";
+}
+
+var buyNow = document.getElementById("buyNow");
+buyNow.addEventListener("click", finish);
+function finish() {}
+
+var checkboxFinish = document.getElementById("checkbox-finish");
+checkboxFinish.addEventListener("click", acceptTerms);
+
+var alertConditions = document.getElementById("alert-conditions");
+
+function acceptTerms() {
+  buyNow.classList.toggle("invisible");
+  alertConditions.classList.toggle("invisible");
 }

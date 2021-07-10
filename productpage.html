@@ -248,14 +248,14 @@
   <h2>Shipping</h2>
   <h4>Shipping type</h4>
   <div>
-      <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required /> Free shipment (72h)</input>
+      <input type="radio" for="shipment-72h" name="shipping-time" id="shipment-72h" value="3" required> Free shipment (72h)</input>
   </div>
   <div>
-      <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2" /> Extra shipping (48h)<span style="font-weight: bold">4,99€</span></input>
+      <input type="radio" for="shipment-48h" name="shipping-time" id="shipment-48h" value="2"> Extra shipping (48h) <span style="font-weight: bold">4,99€</span></input>
   </div>
   <div>
-      <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1" /> Premium (24h)
-      <span style="font-weight: bold">9,99€</span>
+      <input type="radio" for="shipment-24h" name="shipping-time" id="shipment-24h" value="1"> Premium (24h)
+      <span style="font-weight: bold">9,99€</span></input>
   </div>
   <div id="estimated-time">
   </div>
@@ -333,7 +333,7 @@
 
     </div>
 
-    <div id="step4">
+    <div id="step4" class="step4 hidden">
       <div class="your-purchase">
         <div class="your-purchase-block">
           <div class="your-purchase-image">
@@ -341,7 +341,7 @@
             <img src="" alt="" id="purchase-image">
           </div>
           <div class="your-purchase-info">
-            <h4>Assembler Cup</h4>
+            <h3>Assembler Cap</h3>
             <p id="purchase-size"></p>
             <p id="purchase-color"></p>
             <p id="purchase-delivery"></p>
@@ -350,9 +350,9 @@
 
       <div class="your-purchase-checkbox">
           
-          <input type="checkbox" name="checkbox" id="checkbox-conditions" required> I have read and I accept the terms and conditions</input>
-          <p>Please accept the terms and conditions</p>
-          <button class="buttonStyleWhite" id="buyNow">Buy Now</button>
+          <input type="checkbox" id="checkbox-finish" name="checkbox" id="checkbox-conditions" required> I have read and I accept the terms and conditions</input>
+          <p id="alert-conditions">Please accept the terms and conditions</p>
+          <button class="buttonStyleWhite invisible" id="buyNow">Buy Now</button>
       </div>
 
         
@@ -362,10 +362,10 @@
       </div>
     
       <div class="your-order">
-        <p>Your order</p>
-        <p>T-shirt</p>
-        <p>Premium Shipping</p>
-        <p>Total</p>
+        <h4>Your order</h4>
+        <p id="order-price-item">Assembler Cap: <strong>20,95€</strong></p>
+        <p id="order-shipping"></p>
+        <p id="order-total"></p>
       </div>
     </div>
 
