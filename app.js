@@ -150,6 +150,8 @@ function shipmentDate(e) {
   } ${nextDay.getFullYear()}</b>`;
 
   estimated.innerHTML = estimatedTime;
+  var purchaseDelivery = document.getElementById("purchase-delivery");
+  purchaseDelivery.innerHTML = estimatedTime;
 }
 var mainContainer = document.querySelector(".main-container");
 var headstep1 = document.querySelector(".steps");
