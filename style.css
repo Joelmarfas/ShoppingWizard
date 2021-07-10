@@ -444,13 +444,13 @@ form {
 }
 
 .your-purchase {
-  width: 60%;
+  width: 70%;
 }
 
 .your-order {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
 }
 
 .your-purchase-block {
@@ -460,6 +460,8 @@ form {
 }
 
 .your-purchase-image {
+  display: flex;
+  flex-direction: column;
   width: 40%;
 }
 
@@ -469,4 +471,7 @@ form {
 
 .your-purchase-checkbox {
   width: 100%;
+}
+
+#purchase-image {
 }

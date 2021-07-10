@@ -149,6 +149,8 @@ var profileStep = document.getElementById("profile-step");
 var timer = document.querySelector("#timer");
 
 function addToCart() {
+  var purchaseImage = document.getElementById("purchase-image"); //Joel Step 4
+  purchaseImage.src = bigImage.src; // Joel
   for (mainContainerElement of mainContainerElements) {
     mainContainerElement.classList.add("hidden");
   }
