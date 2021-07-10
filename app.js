@@ -40,6 +40,9 @@ function zoomIn(e) {
   e.target.style.borderColor = "black"; // Put black border to the selected element after reset the rest
 }
 
+var purchaseColor = document.getElementById("purchase-color"); // Joel
+purchaseColor.textContent = "Color: Black";
+
 function changeColor(e) {
   for (colorImage of colorImages) {
     colorImage.style.borderColor = "transparent";
@@ -52,6 +55,7 @@ function changeColor(e) {
 
   switch (e.target.id) {
     case "black":
+      purchaseColor.textContent = "Color: Black";
       bigImage.src = "gorras/black-main.jpg";
       smallImages[0].src = "gorras/black-main.jpg";
       smallImages[1].src = "gorras/black-boy.jpg";
@@ -60,6 +64,8 @@ function changeColor(e) {
       break;
 
     case "orange":
+      purchaseColor.textContent = "Color: Orange";
+
       bigImage.src = "gorras/orange-main.jpg";
       smallImages[0].src = "gorras/orange-main.jpg";
       smallImages[1].src = "gorras/orange-boy.jpg";
@@ -68,6 +74,8 @@ function changeColor(e) {
       break;
 
     case "pink":
+      purchaseColor.textContent = "Color: Pink";
+
       bigImage.src = "gorras/pink-main.jpg";
       smallImages[0].src = "gorras/pink-main.jpg";
       smallImages[1].src = "gorras/pink-boy.jpg";
@@ -76,6 +84,8 @@ function changeColor(e) {
       break;
 
     case "white":
+      purchaseColor.textContent = "Color: White";
+
       bigImage.src = "gorras/white-main.jpg";
       smallImages[0].src = "gorras/white-main.jpg";
       smallImages[1].src = "gorras/white-boy.jpg";
@@ -149,6 +159,9 @@ var profileStep = document.getElementById("profile-step");
 var timer = document.querySelector("#timer");
 
 function addToCart() {
+  var size = document.getElementById("size"); // Joel
+  var purchaseSize = document.getElementById("purchase-size"); // Joel
+  purchaseSize.textContent = "Size: " + size.value; // Joel
   var purchaseImage = document.getElementById("purchase-image"); //Joel Step 4
   purchaseImage.src = bigImage.src; // Joel
   for (mainContainerElement of mainContainerElements) {
