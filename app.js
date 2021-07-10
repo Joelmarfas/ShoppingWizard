@@ -245,7 +245,7 @@ var orderShipping = document.getElementById("order-shipping");
 function step3to4(event) {
   event.preventDefault();
   step3.classList.add("hidden");
-  step4.classList.remove("hidden");
+  step4.classList.remove("invisible");
 
   var totalcost = shippingCost + 20.95;
   var c = totalcost.toFixed(2);
