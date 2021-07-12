@@ -17,7 +17,7 @@ function ShowAndHideDiv(form, classElement) {
   }
 }
 
-var startingMinutes = 1;
+var startingMinutes = 5;
 var time = startingMinutes * 60;
 
 var countDownElement = document.getElementById("countdown");

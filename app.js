@@ -171,6 +171,9 @@ var profileStep = document.getElementById("profile-step");
 var timer = document.querySelector("#timer");
 
 function addToCart() {
+  var startingMinutes = 5;
+  var time = startingMinutes * 60;
+
   var size = document.getElementById("size"); // Joel
   var purchaseSize = document.getElementById("purchase-size"); // Joel
   purchaseSize.textContent = "Size: " + size.value; // Joel
